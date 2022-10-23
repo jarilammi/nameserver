@@ -1,0 +1,12 @@
+# File: roles/ufw/tasks/main.yml
+---
+
+- name: Allow Bind9.
+  community.general.ufw:
+    rule: allow
+    name: Bind9
+  when: inventory_hostname in nameservers
+
+- name: Enable UFW.
+  community.general.ufw:
+    state: enabled
