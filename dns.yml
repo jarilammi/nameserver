@@ -1,0 +1,7 @@
+# File: dns.yml
+---
+- name: Install NS
+  hosts: nameservers
+  remote_user: root
+  roles:
+    - bind9
