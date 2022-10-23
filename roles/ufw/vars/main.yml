@@ -1,0 +1,6 @@
+# File: roles/ufw/vars/main.yml
+---
+
+nameservers:
+  - ns1
+  - ns2
