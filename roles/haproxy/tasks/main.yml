@@ -1,0 +1,17 @@
+# File: roles/haproxy/tasks/main.yml
+---
+
+- name: Install the haproxy package.
+  ansible.builtin.apt:
+    pkg:
+    - haproxy
+
+- name: Configure haproxy.
+  ansible.builtin.template:
+    src: templates/haproxy.cfg.j2
+    dest: /etc/haproxy/haproxy.cfg
+    owner: root
+    group: root
+    mode: '0644'
+  notify:
+  - Restart haproxy
