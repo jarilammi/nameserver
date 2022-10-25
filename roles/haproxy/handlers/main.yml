@@ -1,0 +1,7 @@
+# File: roles/haproxy/handlers/main.yml
+---
+
+- name: Restart haproxy
+  ansible.builtin.service:
+    name: haproxy
+    state: restarted
