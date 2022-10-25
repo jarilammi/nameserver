@@ -1,6 +1,6 @@
-# Running the Ansible playbook
+## Running the Ansible playbook
 
-Edit the production file to indicate the real IP addresses of the nameservers. Also edit the roles/ufw/vars/main.yml file if you use other hostnames than ns1 and ns2.
+Edit the production file to indicate either the real IP addresses or Fully Qualified Domain Names of the nameservers and loadbalancers.
 
 Run the playbook with command:
 
