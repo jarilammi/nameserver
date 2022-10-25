@@ -5,7 +5,14 @@
   community.general.ufw:
     rule: allow
     name: Bind9
-  when: inventory_hostname in nameservers
+  when: inventory_hostname in groups.nameservers
+
+- name: Allow all access to 80/tcp.
+  community.general.ufw:
+    rule: allow
+    port: '80'
+    proto: tcp
+  when: inventory_hostname in groups.loadbalancers
 
 - name: Enable UFW.
   community.general.ufw:
