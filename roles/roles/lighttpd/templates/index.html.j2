@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>{{ inventory_hostname }}</title>
+</head>
+<body>
+<h2>{{ inventory_hostname }}</h2>
+
+<p>This page is served from {{ inventory_hostname }} [{{ 
+ansible_default_ipv4.address }}] for added redundancy.</p>
+
+<p>If there's an outage across the zones, the connectivity
+should restore automatically to the locally working webserver
+even if the network connectivity across the zones doesn't.</p>
+
+</body>
+</html>
