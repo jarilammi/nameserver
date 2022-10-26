@@ -1,0 +1,7 @@
+# File: roles/lighttpd/handlers/main.yml
+---
+
+- name: Restart lighttpd
+  ansible.builtin.service:
+    name: haproxy
+    state: restarted
