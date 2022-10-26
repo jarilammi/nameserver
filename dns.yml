@@ -13,3 +13,10 @@
   roles:
     - haproxy
     - ufw
+
+- name: Install FE
+  hosts: webservers
+  remote_user: root
+  roles:
+    - lighttpd
+    - ufw
