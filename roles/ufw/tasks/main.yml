@@ -12,7 +12,7 @@
     rule: allow
     port: '80'
     proto: tcp
-  when: inventory_hostname in groups.loadbalancers
+  when: inventory_hostname in groups.loadbalancers or inventory_hostname in groups.webservers
 
 - name: Enable UFW.
   community.general.ufw:
