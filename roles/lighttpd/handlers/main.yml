@@ -3,5 +3,5 @@
 
 - name: Restart lighttpd
   ansible.builtin.service:
-    name: haproxy
+    name: lighttpd
     state: restarted
