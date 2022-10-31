@@ -19,8 +19,9 @@ $TTL 86400
 
 $ORIGIN cq.fi.
 
-@	IN	A	{{ loadbalancer_ip }}
+@	IN	A	{{ webserver_ip }}
 www	IN	A	{{ webserver_ip }}
+fwd	IN	A	{{ loadbalancer_ip }}
 
 @	IN	TXT	"v=spf1 -all"
 _dmarc	IN	TXT	"v=DMARC1; p=reject; adkim=s; aspf=s; rua=mailto:u0buid4p@ag.eu.dmarcian.com; ruf=mailto:u0buid4p@fr.eu.dmarcian.com;"
