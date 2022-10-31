@@ -1,5 +1,7 @@
 # Regional sustainability
 
+Set at least one nameserver, one loadbalancer and one webserver for each regional area.
+
 Whenever a client is able to reach a nameserver, it means that there is at least one loadbalancer or webserver available in that region.
 
 If the network disconnects between the regions, there should still be a server available. If that outage lasts long enough, the local server will be eventually be resolved correctly and the service restored even if the Network connectivity didn't.
