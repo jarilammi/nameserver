@@ -9,3 +9,12 @@
     - bind9-doc
     - dnsutils
     
+- name: Upload a sample zonefile.
+  ansible.builtin.template:
+    src: templates/cq.fi.j2
+    dest: /etc/bind/db.cq.fi
+    owner: root
+    group: root
+    mode: '0644'
+  notify:
+  - Restart bind9
