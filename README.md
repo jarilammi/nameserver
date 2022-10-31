@@ -6,7 +6,7 @@ If the network disconnects between the regions, there should still be a server a
 
 ## Running the Ansible playbook
 
-Edit the production file to indicate either the real IP addresses or Fully Qualified Domain Names of the nameservers and loadbalancers.
+Edit the production file to indicate either the real IP addresses or Fully Qualified Domain Names of the nameservers and loadbalancers. Also edit the IP addresses on lines 22 and 23 in the roles/bind9/templates/cq.fi.j2 template.
 
 Run the playbook with command:
 
