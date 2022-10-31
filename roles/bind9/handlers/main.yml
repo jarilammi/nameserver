@@ -1,0 +1,7 @@
+# File: roles/bind9/handlers/main.yml
+---
+
+- name: Restart bind9
+  ansible.builtin.service:
+    name: bind9
+    state: restarted
