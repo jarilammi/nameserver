@@ -4,11 +4,11 @@ Set at least one nameserver, one loadbalancer and one webserver for each regiona
 
 Whenever a client is able to reach a nameserver, it means that there is at least one loadbalancer or webserver available in that region.
 
-If the network disconnects between the regions, there should still be a server available. If that outage lasts long enough, the local server will eventually be resolved correctly and the service restored even if the Network connectivity didn't.
+If the network ever disconnects between the regions, there should still be a server available. If that outage lasts long enough, the local server will eventually be resolved correctly and the service restored even if the Network connectivity didn't.
 
 ## Running the Ansible playbook
 
-Edit the [production](https://github.com/jarilammi/nameserver/blob/main/production) file to indicate either the real IP addresses or Fully Qualified Domain Names of the nameservers, loadbalancers and webservers.
+Edit the [production](https://github.com/jarilammi/nameserver/blob/main/production) file to indicate the real IP addresses of the nameservers, loadbalancers and webservers. Alternatively, you may use the Fully Qualified Domain Names for the ansible_host variable.
 
 Run the playbook with command:
 
