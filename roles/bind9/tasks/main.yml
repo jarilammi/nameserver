@@ -11,8 +11,8 @@
     
 - name: Upload a sample zonefile.
   ansible.builtin.template:
-    src: templates/cq.fi.j2
-    dest: /etc/bind/db.cq.fi
+    src: templates/example.net.j2
+    dest: /etc/bind/db.example.net
     owner: root
     group: root
     mode: '0644'
