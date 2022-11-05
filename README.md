@@ -8,6 +8,12 @@ If the network ever disconnects between the regions, there should still be a ser
 
 ## Running the Ansible playbook
 
+Have your freshly installed Ubuntu 22.04 LTS (Jammy Jellyfish) servers with SSH Public Key Authentication for the root user ready. If you want to access the servers after running the playbook, allow your IP address with the command:
+
+```
+# ufw allow from 192.0.2.2
+```
+
 Edit the [production](https://github.com/jarilammi/nameserver/blob/main/production) file to indicate the real IP addresses of the nameservers, loadbalancers and webservers. Alternatively, you may use the Fully Qualified Domain Names for the ansible_host variable.
 
 Run the playbook with command:
