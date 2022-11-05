@@ -2,7 +2,7 @@
 
 $TTL 86400
 
-@       IN      SOA     ns1.lammi.zone.      postmaster.lammi.zone. (
+@       IN      SOA     ns1.example.com.      postmaster.example.com. (
                         2022103101	; serial number YYMMDDNN
                         28800           ; Refresh
                         7200            ; Retry
@@ -10,11 +10,11 @@ $TTL 86400
                         86400           ; Min TTL
 			)
 
-                NS      ns1.lammi.zone.
-                NS      ns2.lammi.zone.
+                NS      ns1.example.com.
+                NS      ns2.example.com.
 
-                MX      10 mail.kapsi.fi.
-                MX      20 mx2.kapsi.fi.
+                MX      10 mail.example.com.
+                MX      20 mx2.example.com.
 
 
 $ORIGIN cq.fi.
@@ -24,5 +24,5 @@ www	IN	A	{{ webserver_ip }}
 fwd	IN	A	{{ loadbalancer_ip }}
 
 @	IN	TXT	"v=spf1 -all"
-_dmarc	IN	TXT	"v=DMARC1; p=reject; adkim=s; aspf=s; rua=mailto:u0buid4p@ag.eu.dmarcian.com; ruf=mailto:u0buid4p@fr.eu.dmarcian.com;"
-_github-pages-challenge-jarilammi	IN	TXT	"022b8f100e65df093b08b4ccdb462e"
+_dmarc	IN	TXT	"v=DMARC1; p=reject; adkim=s; aspf=s; rua=mailto:rua@example.com; ruf=mailto:ruf@example.com;"
+_github-pages-challenge-example	IN	TXT	"391196688aa55d3321deffa736f8d1"
